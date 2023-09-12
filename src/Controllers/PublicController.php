@@ -2,7 +2,7 @@
 namespace App\Controllers;
 class PublicController {
     public function home(){
-        echo 'Home page';
+        include __DIR__ . '/../...views.home.php';
     }
     public function about(){
         echo 'about';
