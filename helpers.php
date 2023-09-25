@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function view($viewName, $vars = []){
     extract($vars);
