@@ -19,8 +19,9 @@ class ArticlesController {
         $article->title = $_POST['title'];
         $article->body = $_POST['body'];
         $article->save();
-        header('Location: http://localhost:8000/admin/articles');
+        header('Location: /admin/articles');
     }
+
     public function show(){
         $id = $_GET['id'];
         $article = Article::find($id);
@@ -38,7 +39,15 @@ class ArticlesController {
     public function update(){
         $id = $_GET['id'];
         $article = Article::find($id);
+        $article->title = $_POST['title'];
         $article->body = $_POST['body'];
         $article->save();
+        header('Location: /admin/articles');
+    }
+    public function delete(){
+        $id = $_GET['id'];
+        $article = Article::find($id);
+        $article->delete();
+        header('Location: /admin/articles');
     }
 }

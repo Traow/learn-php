@@ -12,7 +12,7 @@
         <div class="field">
             <label class="label" for="body">Content</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Content..." name="body" id="body" <?=$article->body?>></textarea>
+                <textarea class="textarea" placeholder="Content..." name="body" id="body"><?=$article->body?></textarea>
             </div>
         </div>
         <div class="field">
